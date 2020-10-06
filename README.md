@@ -6,6 +6,18 @@ In this interview assignment, you'll build a frontend that integrates with the f
 
 ## UI Mockup
 ![Mockup](mockup.png)
+
+## UI instructions
+
+The UI should consist of a single screen. 
+Feel free to adjust the look as long as the criteria above are fulfilled.
+
+On the left, there should be a table of previously submited transactions.
+Newly submitted transactions should be added at the top of the table.
+
+On the right, there should be a form accepting the account number and the amount.
+
+
 ## Predefined test suite ⚙️
 
 In this repository, there is a predefined test suite that validates the minimum assignment criteria.
