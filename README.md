@@ -5,8 +5,7 @@ Hi there! 👋
 In this interview assignment, you'll build a frontend that integrates with the following [Account Management API]().
 
 ## UI Mockup
-...
-
+![Mockup](mockup.png)
 ## Predefined test suite ⚙️
 
 In this repository, there is a predefined test suite that validates the minimum assignment criteria.
