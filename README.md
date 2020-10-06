@@ -4,18 +4,18 @@ Hi there! 👋
 
 In this interview assignment, you'll build a frontend that integrates with the following [Account Management API]().
 
-## UI Mockup
+## UI
+
+### Mockup
 ![Mockup](mockup.png)
 
-## UI instructions
-
 The UI should consist of a single screen. 
-Feel free to adjust the look as long as the criteria above are fulfilled.
+The mockup above is to give you the idea of how it can look. Feel free to adjust the UI as long as the criteria below are covered.
 
-On the left, there should be a table of previously submited transactions.
-Newly submitted transactions should be added at the top of the table.
+On the left, there should be a list with previously submited transactions.
+Newly submitted transactions should be appended at the top of the list.
 
-On the right, there should be a form accepting the account number and the amount.
+On the right, there should be a form for submitting a new balance change.
 
 
 ## Predefined test suite ⚙️
@@ -26,7 +26,9 @@ Run with:
 
 ```
 npm install --save-dev puppeteer pptr-testing-library
-#TODO spin up the backend.
+npm install -g @devskills/account-management-api
+account-management-api
+
 #TODO run the tests.
 ```
 
