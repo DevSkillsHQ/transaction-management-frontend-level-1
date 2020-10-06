@@ -20,7 +20,7 @@ On the right, there should be a form for submitting a new balance change.
 
 ## Predefined test suite ⚙️
 
-In this repository, there is a predefined test suite that validates the minimum assignment criteria.
+This repository provides a test setup consisting of a backend service that implements the [Account Management API](api-specification.yml) and a test suite that validates the minimum assignment criteria.
 
 Run with:
 
