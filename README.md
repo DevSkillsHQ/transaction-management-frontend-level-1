@@ -2,7 +2,7 @@
 
 Hi there! 👋
 
-In this interview assignment, you'll build a frontend that integrates with the following [Account Management API]().
+In this interview assignment, you'll build a frontend that integrates with the following [Account Management API](api-specification.yml).
 
 ## UI
 
