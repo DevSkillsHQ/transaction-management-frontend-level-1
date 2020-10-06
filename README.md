@@ -1,8 +1,11 @@
-# Interview Assignment: `{assignment_name}`
+# Interview Assignment: Account Management Frontend - Level 1
 
 Hi there! 👋
 
-`{intro}`
+In this interview assignment, you'll build a frontend that integrates with the following [Account Management API]().
+
+## UI Mockup
+...
 
 ## Predefined test suite ⚙️
 
@@ -11,14 +14,19 @@ In this repository, there is a predefined test suite that validates the minimum 
 Run with:
 
 ```
-{test_instructions}
+npm install --save-dev puppeteer pptr-testing-library
+#TODO spin up the backend.
+#TODO run the tests.
 ```
 
 ## What you should focus on ⚠️
 
 The goal of this assignment is to assess your knowledge in the following areas:
 
-`{assessment_areas}`
+- Integrating with a REST API.
+- Maintainable & well-tested code (Organize and test your code similar to how you'd do it in a real production codebase).
+- Documentation (Make sure to outline the code structure, and any other technical decisions you would document in a real project).
+- Handling state
 
 ## How you submit your solution 📬
 
