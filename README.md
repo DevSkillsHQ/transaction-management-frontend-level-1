@@ -32,7 +32,7 @@ account-management-api # Run the backend service
 - **Organize your code with components**. Extract components that help you avoid duplication, but don't break things apart needlessly. We want to see that you can implement the UI with sound HTML semantics.
 - **Document your choices**. Extend this README.md with info about how to run your application along with any hints that will help us review your submission and better understand the decisions you made.
 
-## How you submit your solution 📬
+## How to submit your solution 📬
 
 1. Commit your changes to a new branch called `implementation`.
 2. Create a Pull Request from `implementation` to `master`.
