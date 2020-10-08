@@ -2,7 +2,7 @@
 
 Hi there! 👋
 
-In this interview assignment, your task is to build a frontend for the [Account Management API](api-specification.yml) service.
+In this interview assignment, your task is to build a frontend app that integrates with the [Account Management API](api-specification.yml) service to create and read account transactions.
 
 See the mockup below to get the idea of how it should look.
 
@@ -10,10 +10,9 @@ See the mockup below to get the idea of how it should look.
 
 Feel free to tweak the UI but please make sure it covers the following:
 
-1. There's a form with an `Account ID` and `Amount` fields. Whenever the form is submitted, the data should be sent on the server.
-2. There's a list of the previously submitted transactions. The transaction info should include the corresponding `Account ID`, `Amount`, and the account `Balance` at the submission time.
-3. On a full page-reload, the transaction list should include all previously submitted transactions.
-4. A transaction should appear at the top of the list right when it was submitted.
+1. There's a form with an `Account ID` and `Amount` fields. Whenever the form is submitted, the collected data should be sent the the server.
+2. There's a list of the previously submitted transactions. The transaction info should include the corresponding `Account ID`, `Amount`, and the account `Balance` at the time the transaction was sent to the server.
+3. A transaction should appear at the top of the list right when it was submitted.
 
 ## What's included 🗂
 We've added the [Account Management API](api-specification.yml) specification defined in the Open API format, as well as a backend service that implements this API.
