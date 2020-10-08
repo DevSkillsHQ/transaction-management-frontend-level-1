@@ -10,9 +10,11 @@ See the mockup below to get the idea of how it should look.
 
 Feel free to tweak the UI but please make sure it covers the following:
 
-1. There's a form with an `Account ID` and `Amount` fields. Whenever the form is submitted, the collected data should be sent the the server.
-2. There's a list of the previously submitted transactions. The transaction info should include the corresponding `Account ID`, `Amount`, and the account `Balance` at the time the transaction was sent to the server.
-3. A transaction should appear at the top of the list right when it was submitted.
+* There's a form with an `Account ID` and `Amount` fields. Whenever the form is submitted, a new transaction with the collected data should be created on the server.
+* There's a list of the previously submitted transactions where each transaction should have the following messaging:
+  * When the transaction amount is > 0 : "Transferred $`{amount}` to `{account_id}`. Current `{account_id}`'s balance is `${current_account_balance}`.
+  * When the transaction amount is < 0 : "Withdrew $`{amount}` from `{account_id}`. Current `{account_id}`'s balance is `${current_account_balance}`.
+* A newly submitted transaction should appear at the top of the list.
 
 ## What's included 🗂
 We've added the [Account Management API](api-specification.yml) specification defined in the Open API format, as well as a backend service that implements this API.
