@@ -36,7 +36,7 @@ account-management-api # Run the backend service
 ## How to submit your solution 📬
 
 1. Commit your changes to a new branch called `implementation`.
-2. Create a Pull Request from `implementation` to `master`.
+2. Create a Pull Request from `implementation`.
 
 ## What to expect next 👀
 1. An engineer will do a code review of your Pull Request. They might ask questions that you'll need to answer, so please watch for GitHub notifications in your mailbox.
