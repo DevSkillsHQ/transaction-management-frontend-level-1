@@ -50,6 +50,9 @@ account-management-api # Run the backend service
 - Q: What if I get stuck?
   - A: Feel free to create a GitHub issue on this repository describing your problem.
   
+
 ---
 
-Made by [DevSkills](https://devskills.co).
+Made by [DevSkills](https://devskills.co). 
+
+How was your experience? **Give us a shout on [Twitter](https://twitter.com/DevSkillsHQ) / [LinkedIn](https://www.linkedin.com/company/devskills)**.
