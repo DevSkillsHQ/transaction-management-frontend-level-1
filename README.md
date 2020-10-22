@@ -12,8 +12,8 @@ Feel free to tweak the UI but please make sure it covers the following:
 
 * There's a form with an `Account ID` and `Amount` fields. Whenever the form is submitted, a new transaction with the collected data should be created on the server.
 * There's a list of the previously submitted transactions where each transaction should have the following messaging:
-  * When the transaction amount is > 0 : "Transferred $`{amount}` to `{account_id}`. Current `{account_id}`'s balance is `${current_account_balance}`.
-  * When the transaction amount is < 0 : "Withdrew $`{amount}` from `{account_id}`. Current `{account_id}`'s balance is `${current_account_balance}`.
+  * When the transaction amount is > 0 : "Transferred $`{amount}` to `{account_id}`. Current `{account_id}`'s balance is `${current_account_balance}`".
+  * When the transaction amount is < 0 : "Withdrew $`{amount}` from `{account_id}`. Current `{account_id}`'s balance is `${current_account_balance}`".
 * A newly submitted transaction should appear at the top of the list.
 
 ## What's included 🗂
