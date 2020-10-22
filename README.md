@@ -23,15 +23,15 @@ Feel free to tweak the UI but please make sure it includes the following:
   * Define a transaction list using an [HTML description list](https://www.w3schools.com/tags/tag_dl.asp).
 
 ## What's included 🗂
-We've added the [Account Management API](api-specification.yml) specification defined in the Open API format, as well as a backend service that implements this API.
+We've added the [Account Management API](api-specification.yml) specification defined in the Open API format, a backend service that implements this API, and an automated [Cypress](https://www.cypress.io/) test suite. The necessary npm dependencies for the backend and the tests are already defined in `package.json`.
 
-Please use the provided backend to verify that your frontend app works as expected.
-
-To spin it up locally, run:
+To make sure that your frontend app works as expected, run the following:
 ```
-npm install -g @devskills/account-management-api # Install the backend service
-account-management-api # Run the backend service
+npm install # Installs the required dependencies
+# Launch your frontend app here
+npm run test # Spins up the backend and runs the tests
 ```
+[cypress.json](cypress.json) defines the base URL where your app is expected to run (`http://localhost:3000` by default).
 
 ## What we're looking for ⭐️
 - **Integrate with a REST API**. Using the provided API spec, figure out the right service endpoints to use.
