@@ -17,9 +17,9 @@ Feel free to tweak the UI but please make sure it includes the following:
 * A newly submitted transaction should appear at the top of the list.
 * This assignment comes with an automated test suite. To make it work with your app, please do the following:
   * Add a `data-cy` attribute to the following HTML elements:
-    * Form: <form data-cy="form" ... />
-    * Account ID: <input data-cy="accountId" ... />
-    * Amount: <input data-cy="amount" ... />
+    * Form: `<form data-cy="form" ... />`
+    * Account ID: `<input data-cy="accountId" ... />`
+    * Amount: `<input data-cy="amount" ... />`
   * Define a transaction list using an [HTML description list](https://www.w3schools.com/tags/tag_dl.asp).
 
 ## What's included 🗂
