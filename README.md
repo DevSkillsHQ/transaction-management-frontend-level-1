@@ -31,6 +31,13 @@ npm install # Installs the required dependencies
 # Launch your frontend app here
 npm run test # Spins up the backend and runs the tests
 ```
+Or using yarn:
+```
+yarn install # Installs the required dependencies
+# Launch your frontend app here
+yarn run test # Spins up the backend and runs the tests
+```
+
 [cypress.json](cypress.json) defines the base URL where your app is expected to run (`http://localhost:3000` by default).
 
 ## What we're looking for ⭐️
