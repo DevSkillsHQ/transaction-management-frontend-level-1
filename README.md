@@ -23,7 +23,7 @@ Feel free to tweak the UI but please make sure it includes the following:
   * Define a transaction list using an [HTML description list](https://www.w3schools.com/tags/tag_dl.asp).
 
 ## What's included 🗂
-We've added the [Account Management API](api-specification.yml) specification defined in the Open API format, a backend service that implements this API, and an automated [Cypress](https://www.cypress.io/) test suite. The necessary npm dependencies for the backend and the tests are already defined in `package.json`.
+We've added the [Account Management API](api-specification.yml) specification defined in the Open API format, a backend service that implements this API, and an automated [Cypress](https://www.cypress.io/) test suite. The necessary npm dependencies for the backend and the tests are already defined in [package.json](package.json).
 
 To make sure that your frontend app works as expected, run the following:
 ```
