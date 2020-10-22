@@ -2,19 +2,25 @@
 
 Hi there! 👋
 
-In this interview assignment, your task is to build a frontend app that integrates with the [Account Management API](api-specification.yml) service to create and read account transactions.
+In this coding assignment, your task is to build a frontend app that integrates with the [Account Management API](api-specification.yml) to create and read account transactions.
 
 See the mockup below to get the idea of how it should look.
 
 ![Mockup](mockup.png)
 
-Feel free to tweak the UI but please make sure it covers the following:
+Feel free to tweak the UI but please make sure it includes the following:
 
-* There's a form with an `Account ID` and `Amount` fields. Whenever the form is submitted, a new transaction with the collected data should be created on the server.
+* There's a form with two input fields (`Account ID` and `Amount`). Whenever the form is submitted, a new transaction with the collected data should be created on the server.
 * There's a list of the previously submitted transactions where each transaction should have the following messaging:
   * When the transaction amount is > 0 : "Transferred $`{amount}` to `{account_id}`. Current `{account_id}`'s balance is `${current_account_balance}`".
   * When the transaction amount is < 0 : "Withdrew $`{amount}` from `{account_id}`. Current `{account_id}`'s balance is `${current_account_balance}`".
 * A newly submitted transaction should appear at the top of the list.
+* This assignment comes with an automated test suite. To make it work with your app, please do the following:
+  * Add a `data-cy` attribute to the following HTML elements:
+    * Form: <form data-cy="form" ... />
+    * Account ID: <input data-cy="accountId" ... />
+    * Amount: <input data-cy="amount" ... />
+  * Define a transaction list using an [HTML description list](https://www.w3schools.com/tags/tag_dl.asp).
 
 ## What's included 🗂
 We've added the [Account Management API](api-specification.yml) specification defined in the Open API format, as well as a backend service that implements this API.
