@@ -1,44 +1,39 @@
 # Interview Assignment: Account Management Frontend - Level 1
 
-Hi there! 👋
+👋 Hi there!
 
-In this coding assignment, your task is to build a frontend app that integrates with the [Account Management API](api-specification.yml) to create and read account transactions.
+In this coding assignment, your task is to build a Frontend app that integrates with the [Account Management API](api-specification.yml) to create and read account transactions.
 
-See the mockup below to get the idea of how it should look.
+See the instructions below to get the idea of how it should work.
+
+## Instructions
+Here's a mockup to get the idea of how the Frontend should look.
 
 ![Mockup](mockup.png)
 
-Feel free to tweak the UI but please make sure it includes the following:
+This assignment includes a test suite. To make your Frontend app compatible with it please ensure the following (feel free to tweak the UI otherwise):
 
-* There's a form with two input fields (`Account ID` and `Amount`). Whenever the form is submitted, a new transaction with the collected data should be created on the server.
-* There's a list of the previously submitted transactions where each transaction should have the following messaging:
-  * When the transaction amount is > 0 : "Transferred $`{amount}` to `{account_id}`. Current `{account_id}`'s balance is `${current_account_balance}`".
-  * When the transaction amount is < 0 : "Withdrew $`{amount}` from `{account_id}`. Current `{account_id}`'s balance is `${current_account_balance}`".
-* A newly submitted transaction should appear at the top of the list.
-* This assignment comes with an automated test suite. To make it work with your app, please do the following:
-  * Add a `data-cy` attribute to the following HTML elements:
-    * Form: `<form data-cy="form" ... />`
-    * Account ID: `<input data-cy="accountId" ... />`
-    * Amount: `<input data-cy="amount" ... />`
-  * Define a transaction list using an [HTML description list](https://www.w3schools.com/tags/tag_dl.asp).
+* There's a form with two input fields: Account ID and Amount. Whenever the form is submitted, a new transaction with the collected data should be created on the server. The HTML elements must have the following attributes:
+  * Account ID input field: `data-type="account-id"`
+  * Amount input field: `data-type="amount"`
+  * Form: `data-type="transaction-form"`
+* There's a list of the previously submitted transactions. Every newly submitted transaction should appear at the top of the list. The HTML element that represents a transaction should include the following HTML attributes: `data-type=transaction`, `data-account-id={transaction-account-id}`, `data-amount={transaction-amount}`, and `data-balance={current-account-balance}`
 
 ## What's included 🗂
-We've added the [Account Management API](api-specification.yml) specification defined in the Open API format, a backend service that implements this API, and an automated [Cypress](https://www.cypress.io/) test suite. The necessary npm dependencies for the backend and the tests are already defined in [package.json](package.json).
+We've added the [Account Management API](api-specification.yml) specification defined in the Open API format, a backend service that implements this API, and an automated Cypress test suite. 
 
-To make sure that your frontend app works as expected, run the following:
-```
-npm install # Installs the required dependencies
-# Launch your frontend app here
-npm run test # Spins up the backend and runs the tests
-```
-Or using yarn:
-```
-yarn install # Installs the required dependencies
-# Launch your frontend app here
-yarn run test # Spins up the backend and runs the tests
-```
+Before running the tests, update the `baseUrl` (where your Frontend runs) in [cypress.json](cypress.json), and then run your app.
 
-[cypress.json](cypress.json) defines the base URL where your app is expected to run (`http://localhost:3000` by default).
+Run the tests:
+```shell script
+npm install # Install the required test dependencies
+npm run test # Spin up the backend and run the tests
+```
+Or with yarn:
+```shell script
+yarn install # Install the required test dependencies
+yarn run test # Spin up the backend and run the tests
+```
 
 ## What we're looking for ⭐️
 - **Integrate with a REST API**. Using the provided API spec, figure out the right service endpoints to use.
