@@ -22,16 +22,6 @@ components:
           type: integer
       required:
         - amount
-    MaxTransactionVolume:
-      type: object
-      properties:
-        maxVolume:
-          type: integer
-        accounts:
-          type: array
-          items:
-            type: string
-            format: uuid
   examples:
     PositiveAmount:
       value:
@@ -44,13 +34,6 @@ components:
     PositiveBalance:
       value:
         balance: 10
-    MaxTransactionVolumeExample:
-      value:
-        maxVolume: 4
-        accounts: [
-          "44a92331-a533-4dd3-82e3-3ff75219e33b",
-          "7c9be9e8-a6df-4f43-9a44-38c10ad0de4a"
-        ]
 paths:
   /amount:
     post:
@@ -133,16 +116,3 @@ paths:
                   $ref: '#/components/examples/PositiveBalance'
         '404':
           description: Transaction not found
-  /max_transaction_volume:
-    get:
-      summary: Returns accounts with max number of transactions.
-      responses:
-        '200':
-          description: Accounts with max number of transactions.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/MaxTransactionVolume'
-              examples:
-                MaxTransactionVolumeExample:
-                  $ref: '#/components/examples/MaxTransactionVolumeExample'
