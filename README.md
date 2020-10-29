@@ -22,17 +22,14 @@ This assignment includes a test suite. To make your Frontend app compatible with
 ## What's included 🗂
 We've added the [Account Management API](api-specification.yml) specification defined in the Open API format, a backend service that implements this API, and an automated Cypress test suite. 
 
-Before running the tests, update the `baseUrl` (where your Frontend runs) in [cypress.json](cypress.json), and then run your app.
+To run the tests, first update the `baseUrl` (where your Frontend runs) in [cypress.json](cypress.json) and run your app.
 
-Run the tests:
-```shell script
-npm install # Install the required test dependencies
-npm run test # Spin up the backend and run the tests
-```
-Or with yarn:
+Then to spin up the Backend and run the tests:
+
 ```shell script
 yarn install # Install the required test dependencies
-yarn run test # Spin up the backend and run the tests
+yarn run start:backend # Spin up the backend
+yarn run test # Run the tests
 ```
 
 ## What we're looking for ⭐️
@@ -43,8 +40,10 @@ yarn run test # Spin up the backend and run the tests
 
 ## How to submit your solution 📬
 
-1. Commit your changes to a new branch called `implementation`.
-2. Create a Pull Request from `implementation`.
+1. Update the [`build:frontend`](package.json#L5) and [`start:frontend`](package.json#L6) scripts in [package.json](package.json) that respectively build and run your application. 
+2. Commit and push your changes to a new branch called `implementation`. A new [GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions/quickstart) run will trigger automatically based on the [predefined pipeline](.github/workflows/tests.yml). The pipeline will run the `build:frontend` and `start:frontend` scripts from above to spin up your application and run the predefined Cypress tests against it. In case you want to troubleshoot a particular pipeline run, you can access both the video and the screenshots taken by the [upload-artifact](https://github.com/actions/upload-artifact#where-does-the-upload-go) GitHub action.
+3. Make sure your latest build has succesfully passed (you should see a green checkbox in GitHub).
+4. Create a Pull Request from `implementation`.
 
 ## What to expect next 👀
 1. An engineer will do a code review of your Pull Request. They might ask questions that you'll need to answer, so please watch for GitHub notifications in your mailbox.
