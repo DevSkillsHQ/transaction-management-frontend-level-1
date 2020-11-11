@@ -6,7 +6,7 @@ The app is located under `/app`. It builds with the `build_app` command and runs
 
 ```json
 {
-  "build:fullstack": "cd app && build_app",
-  "start:fullstack": "cd app && run_app"
+  "build:frontend": "cd app && build_app",
+  "start:frontend": "cd app && run_app"
 }
 ```
