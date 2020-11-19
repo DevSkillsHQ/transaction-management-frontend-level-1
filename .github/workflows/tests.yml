@@ -17,12 +17,12 @@ jobs:
           build: yarn run build:frontend
           start: yarn run start
       - uses: actions/upload-artifact@v1
-        if: failure()
+        if: always()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
       - uses: actions/upload-artifact@v1
-        if: failure()
+        if: always()
         with:
           name: cypress-videos
           path: cypress/videos
