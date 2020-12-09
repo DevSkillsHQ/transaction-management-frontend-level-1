@@ -10,18 +10,16 @@ Try not to spend more than **3 hours**.
 
 Your task is to build a Frontend app that integrates with a backend service that implements this [API specification](api-specification.yml). The API defines a set of operations for creating and reading account transactions. You can use [editor.swagger.io](https://editor.swagger.io/) to visualize the spec.
 
-#### Mockup 🧱
+#### App mockup 🧱
 
 ![Mockup](mockup.png)
 
-## Compatibility with the tests 🔌
-This assignment comes with a predefined test suite. To make your Frontend app work with it please ensure the following (feel free to tweak the UI otherwise):
-
-* There's a form with two input fields: Account ID and Amount. Whenever the form is submitted, a new transaction with the collected data should be created on the server, and the corresponding input fields are cleared. The HTML elements must have the following attributes:
+#### App specification 📘
+* There's a form with two input fields: Account ID and Amount. Whenever the form is submitted, a new transaction with the collected data should be created on the backend, and the corresponding input fields are cleared. The HTML elements must have the following HTML attributes:
   * Account ID input field: `data-type="account-id"`
   * Amount input field: `data-type="amount"`
   * Form: `data-type="transaction-form"`
-* There's a list of the previously submitted transactions. Every newly submitted transaction should appear at the top of the list. The HTML element that represents a transaction should include the following HTML attributes: `data-type=transaction`, `data-account-id={transaction-account-id}`, `data-amount={transaction-amount}`, and `data-balance={current-account-balance}`
+* There's a list of the previously submitted transactions. Every newly submitted transaction should appear at the top of the list. The HTML element that represents a transaction should include the following HTML attributes: `data-type=transaction`, `data-account-id={transaction-account-id}`, `data-amount={transaction-amount}`, and `data-balance={current-account-balance}`.
 
 ### The focus areas 🔍
 - **Integrate with a REST API**. Using the provided API spec, figure out the right service endpoints to use.
