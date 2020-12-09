@@ -8,7 +8,7 @@ Try not to spend more than **3 hours**.
 
 ### The challenge 🎯
 
-Your task is to build a Frontend app that integrates with a backend service that implements this [API specification](api-specification.yml). The API defines a set of operations for creating and reading account transactions. You can use [editor.swagger.io](https://editor.swagger.io/) to visualize the spec.
+Your task is to build a Frontend app that integrates with a predefined backend service. The backend service implements this [API specification](api-specification.yml) that defines a set of operations for creating and reading account transactions. You can use [editor.swagger.io](https://editor.swagger.io/) to visualize the spec.
 
 #### App mockup 🧱
 
