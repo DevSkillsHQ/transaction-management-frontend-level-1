@@ -30,7 +30,7 @@ Your task is to build a Frontend app that integrates with a backend service that
 ### The provided boilerplate 🗂
 * The [service specification](api-specification.yml) in the Open API format.
 * Automated tests to validate your solution. To run locally:
-  * Install the required test dependencies with `yarn install`.
+  * Install the required test dependencies with `yarn install` (please give it some time to download the necessary dependencies).
   * Update the `baseUrl` (where your app will run) in [cypress.json](cypress.json).
   * Spin up the provided backend service with `yarn run start:backend` (restart after every test run).
   * Run your app.
