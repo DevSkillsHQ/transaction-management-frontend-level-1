@@ -32,7 +32,7 @@ Your task is to build a Frontend app that integrates with a predefined backend s
 * Automated tests to validate your solution. To run locally:
   * Install the required test dependencies with `yarn install` (please give it some time to download the necessary dependencies).
   * Update the `baseUrl` (where your app will run) in [cypress.json](cypress.json).
-  * Spin up the provided backend service with `yarn run start:backend` (restart after every test run).
+  * Spin up the provided backend service with `yarn run start:backend` (restart after every test run). It'll be available on http://localhost:8080/.
   * Run your app.
   * Run the tests with `yarn run test`.
 
