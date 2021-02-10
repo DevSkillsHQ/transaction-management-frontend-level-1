@@ -32,10 +32,10 @@ Configure your repository. You have 2 options:
 
 1. [Complete a boilerplate import](https://docs.devskills.co/collections/85-the-interview-process/articles/342-importing-challenge-boilerplate).
 2. Configure the predefined backend:
-1. Run `npm install @devskills/account-management-api`.
-2. Add the following scripts to [package.json](package.json):
-   1. `"start:backend": "node_modules/.bin/account-management-api",`
-   2. `"start:fullstack": "npm run start:backend & npm run start",`
+    1. Run `npm install @devskills/account-management-api`.
+    2. Add the following scripts to [package.json](package.json):
+        1. `"start:backend": "node_modules/.bin/account-management-api",`
+        2. `"start:fullstack": "npm run start:backend & npm run start",`
 
 #### Alternatively, use the manual setup:
 
