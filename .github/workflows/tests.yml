@@ -14,8 +14,8 @@ jobs:
       - name: Run tests
         uses: cypress-io/github-action@v2
         with:
-          build: yarn run build:frontend
-          start: yarn run start
+          build: npm run build:frontend
+          start: npm run start
       - uses: actions/upload-artifact@v1
         if: always()
         with:
