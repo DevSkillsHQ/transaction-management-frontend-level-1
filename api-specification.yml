@@ -110,9 +110,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Balance'
+                $ref: '#/components/schemas/Amount'
               examples:
-                PositiveBalance:
-                  $ref: '#/components/examples/PositiveBalance'
+                PositiveAmount:
+                  $ref: '#/components/examples/PositiveAmount'
         '404':
           description: Transaction not found
