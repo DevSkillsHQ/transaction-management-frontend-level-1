@@ -1,48 +1,61 @@
-describe('Account Management Frontend - Level 1', () => {
-  it('should load and submit transactions', () => {
+// DO NOT CHANGE THIS FILE!
+
+function uuid() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
+describe('Transaction Management Frontend - Level 1', () => {
+  it('The app can handle the happy case scenarios', () => {
     cy.visit('/')
 
     // submit a transaction & verify the position on the list
-    cy.get('[data-type=account-id]').type('70ad2f95-aa52-4e04-a085-c5cc2a4d4ee4')
-    cy.get('[data-type=amount]').type('30')
+    const accountId = uuid()
+    const amount = 30
+    const balance = 30
+    cy.get('[data-type=account-id]').type(accountId)
+    cy.get('[data-type=amount]').type(amount)
     cy.get('[data-type=transaction-form]').submit()
-    cy.get('[data-type=transaction]').first().get('[data-account-id=70ad2f95-aa52-4e04-a085-c5cc2a4d4ee4][data-amount=30][data-balance=30]').should('exist')
+    cy.get(`[data-type=transaction][data-account-id=${accountId}][data-amount=${amount}][data-balance=${balance}]`).should('exist')
 
     // submit another transaction & verify the position on the list
-    cy.get('[data-type=account-id]').type('aaad2f95-aa52-4e04-a085-c5cc2a4d4ee4')
-    cy.get('[data-type=amount]').type('7')
+    const anotherAccountId = uuid()
+    const anotherAmount = 7
+    const anotherBalance = 7
+    cy.get('[data-type=account-id]').type(anotherAccountId)
+    cy.get('[data-type=amount]').type(anotherAmount)
     cy.get('[data-type=transaction-form]').submit()
-    cy.get('[data-type=transaction]').first().get('[data-account-id=aaad2f95-aa52-4e04-a085-c5cc2a4d4ee4][data-amount=7][data-balance=7]').should('exist')
+    cy.get(`[data-type=transaction][data-account-id=${anotherAccountId}][data-amount=${anotherAmount}][data-balance=${anotherBalance}]`).should('exist')
 
     // submit a transaction with a negative amount & verify the position on the list
-    cy.get('[data-type=account-id]').type('aaad2f95-aa52-4e04-a085-c5cc2a4d4ee4')
-    cy.get('[data-type=amount]').type('-7')
+    const negativeAmount = -7
+    const negativeBalance = 0
+    cy.get('[data-type=account-id]').type(anotherAccountId)
+    cy.get('[data-type=amount]').type(negativeAmount)
     cy.get('[data-type=transaction-form]').submit()
-    cy.get('[data-type=transaction]').first().get('[data-account-id=aaad2f95-aa52-4e04-a085-c5cc2a4d4ee4][data-amount=-7][data-balance=0]').should('exist')
+    cy.get(`[data-type=transaction][data-account-id=${anotherAccountId}][data-amount=${negativeAmount}][data-balance=${negativeBalance}]`).should('exist')
   })
 
-  it('should reject invalid input data', () => {
+  it('The app can handle invalid input scenarios', () => {
     cy.visit('/')
 
-    // submit a regular transaction
-    cy.get('[data-type=account-id]').type('6113255d-318f-4128-9e2a-a1c1b796a29e')
-    cy.get('[data-type=amount]').type('9')
-    cy.get('[data-type=transaction-form]').submit()
-    cy.get('[data-type=transaction]').first().get('[data-account-id=6113255d-318f-4128-9e2a-a1c1b796a29e][data-amount=9][data-balance=9]').should('exist')
-
     // invalid account_id
-    cy.get('[data-type=account-id]').type('123')
-    cy.get('[data-type=amount]').type('12')
+    const invalidAccountId = 123
+    const invalidAccountIdAmount = 12
+    cy.get('[data-type=account-id]').type(invalidAccountId)
+    cy.get('[data-type=amount]').type(invalidAccountIdAmount)
     cy.get('[data-type=transaction-form]').submit()
-    // still the previous transaction at the top of the list
-    cy.get('[data-type=transaction]').first().get('[data-account-id=6113255d-318f-4128-9e2a-a1c1b796a29e][data-amount=9][data-balance=9]').should('exist')
+    cy.get(`[data-type=transaction][data-account-id=${invalidAccountId}][data-amount=${invalidAccountIdAmount}]`).should('not.exist')
 
-    cy.get('[data-type=account-id]').type('0708c2b1-e1c9-4c31-8647-c2f44b7664e7')
+    const invalidAmountAccountId = uuid()
+    const invalidAmount = 'abc'
+    cy.get('[data-type=account-id]').type(invalidAmountAccountId)
     // invalid amount
-    cy.get('[data-type=amount]').type('abc')
+    cy.get('[data-type=amount]').type(invalidAmount)
     cy.get('[data-type=transaction-form]').submit()
-    // still the previous transaction at the top of the list
-    cy.get('[data-type=transaction]').first().get('[data-account-id=6113255d-318f-4128-9e2a-a1c1b796a29e][data-amount=9][data-balance=9]').should('exist')
-    
+    cy.get(`[data-type=transaction][data-account-id=${invalidAmountAccountId}][data-amount=${invalidAmount}]`).should('not.exist')
+
   })
 })
