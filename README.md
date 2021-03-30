@@ -98,7 +98,7 @@ npm install
 npm run test
 ```
 
-## What we expect from you ⏳
+## What we expect from you
 
 1. Make the provided E2E tests pass.
 2. Push your code to the new `implementation` branch.
