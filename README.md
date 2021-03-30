@@ -1,66 +1,115 @@
-# Account Management Frontend - Level 1
+# Transaction Management Frontend - Level 1
 
-### The task 🧩
+Your task is to **build a frontend app** that **integrates with the Transaction Management API** and **make the provided E2E tests pass**.
 
-Your task is to build a frontend service that integrates with the [Account Management API](api-specification.yml) backend. This API defines a set of operations for creating and reading account transactions. You can use [editor.swagger.io](https://editor.swagger.io/) to visualize the spec.
+Please agree with your hiring team regarding the tech stack choice.
 
-### App mockup 🧱
+Here's how your app could look:
 
-![Mockup](mockup.png)
+![tm](https://user-images.githubusercontent.com/1162212/112980759-905c8a00-915a-11eb-9a49-b439e119a76d.png)
 
-### App specification 📘
-* There's a form with two input fields: Account ID and Amount. Whenever the form is submitted, a new transaction with the collected data should be created on the backend, and the corresponding input fields are cleared. The HTML elements must have the following HTML attributes:
-  * Account ID input field: `data-type="account-id"`
-  * Amount input field: `data-type="amount"`
-  * Form: `data-type="transaction-form"`
-* There's a list of the previously submitted transactions. Every newly submitted transaction should appear at the top of the list. The HTML element that represents a transaction should include the following HTML attributes: `data-type=transaction`, `data-account-id={transaction-account-id}`, `data-amount={transaction-amount}`, and `data-balance={current-account-balance}`
+Feel free to tweak the UI, but please ensure that the following HTML is in place.
 
-### What we expect from you ⏳
+#### The form for submitting transactions
 
-- **Commit your code to a new branch called `implementation`**.
-- **Integrate with the REST API**. Using the provided API spec, figure out the right service endpoints to use.
-- **Make the provided API tests pass**. We added a set of API tests that run every time you push to a remote branch other than `master`/`main`. See the instructions below covering how to run them locally.
-- **Implement client-side form data validation**. The API has restrictions on the allowed data format. Make sure to do the required checks client-side before sending the data to the server.
-- **Organize your code with components**. Extract components that help you avoid duplication, but don't break things apart needlessly. We want to see that you can implement the UI with sound HTML semantics.
-- **Document your choices**. Extend this README.md with info about how to run your application along with any hints that will help us review your submission and better understand the decisions you made. Specifically, please describe your solution for re-sending failed transactions.
+```html
+<form data-type="transaction-form">
+  <input data-type="account-id" ... />
+  <input data-type="amount" ... />
+</form>
+```
 
-### Before you get started ⚠️
+Both input **fields should be cleared** after the form is submitted.
 
-Configure your repository. You have 2 options:
+#### The transaction list
 
-#### Set up boilerplate:
+Every new transaction goes on **the top of the list** and should have an enclosing `<div />` with the following structure:
 
-1. [Complete a boilerplate import](https://docs.devskills.co/collections/85-the-interview-process/articles/342-importing-challenge-boilerplate).
-2. Configure the predefined backend:
-    1. Run `npm install @devskills/account-management-api`.
-    2. Add the following scripts to [package.json](package.json):
-        1. `"start:backend": "node_modules/.bin/account-management-api",`
-        2. `"start:fullstack": "npm run start:backend & npm run start",`
+```html
+<div 
+     data-type="transaction"
+     data-account-id="${transaction-account-id}"
+     data-amount="${transaction-amount}"
+     data-balance="${current-account-balance}" ...>
+  ...
+</div>
+```
 
-#### Alternatively, use the manual setup:
+- `${transaction-account-id}` - account id of the corresponding transaction.
+- `${transaction-amount}` - transaction amount.
+- `${current-account-balance}` - the current balance of the corresponding account right after submitting the transaction.
 
-1. Update the `apiUrl` (where your app will run) in [cypress.json](cypress.json).
-2. Update the [`build`](package.json#L5) and [`start`](package.json#L6) scripts in [package.json](package.json) to respectively build and start your app. **[See examples](https://www.notion.so/Frontend-c614dbc47cca407788a29c3130cc1523)**.
+## Before you get started
 
-### Running the E2E tests locally ⚙️
+#### Import boilerplate
 
-* Run `npm install`.
-* Spin up the backend on **port 8080** with `npm run start:backend` (repeat before each test run).
-* Run your app.
-* Run the tests with `npm run test`.
+Use [this link](https://docs.devskills.co/collections/85-the-interview-process/articles/342-importing-challenge-boilerplate) to get boilerplate code for your tech stack to configure a minimal setup for running the E2E tests.
 
-### When you're done ✅
+<details>
+<summary>Alternatevily, use the manual setup.</summary>
 
-1. Create a Pull Request from the `implementation` branch.
-2. Answer the questions you get on your Pull Request.
+1. Update the `baseUrl` (where your app will run) in [cypress.json](cypress.json).
+2. Update the [`build`](package.json#L5) and [`start`](package.json#L6) scripts in [package.json](package.json) to respectively build and start your app.
 
-**If you don't have enough time to finish**, push what you got and describe how you'd do the rest in a `.md` file.
+</details>
 
-### Need help? 🤯
+#### Get familiar with the API
 
-Start with [Troubleshooting](https://www.notion.so/Troubleshooting-d18bdb5d2ac341bb82b21f0ba8fb9546), and in case it didn't help, create a new GitHub issue. A human will help you.
+<details>
+<summary>Request examples</summary>
 
-### Time estimate ⏳
+##### Get historical transactions
+
+```
+GET https://infra.devskills.app/api/transaction-management/transactions
+```
+
+##### Create a new transaction
+
+```
+POST https://infra.devskills.app/api/transaction-management/transaction
+Content-Type: application/json
+
+{
+  "account_id": "0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2",
+  "amount": 7
+}
+```
+
+##### Get a transaction by id
+
+```
+GET https://infra.devskills.app/api/transaction-management/transactions/7c94635a-40a3-4c87-888a-42c3ce5b9750
+```
+
+##### Get an account by id
+
+```
+GET https://infra.devskills.app/api/transaction-management/accounts/0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2
+```
+
+</details>
+
+#### Try running the E2E tests locally
+
+```bash
+npm install
+# Run your app here
+npm run test
+```
+
+## What we expect from you ⏳
+
+1. Make the provided E2E tests pass.
+2. Push your code to the new `implementation` branch.
+3. Create a new pull request, but please **do not merge it**.
+4. Await further instructions from the hiring team.
+
+## Need help?
+
+Start with [Troubleshooting](https://www.notion.so/Troubleshooting-d18bdb5d2ac341bb82b21f0ba8fb9546), and in case it didn't help, create a new GitHub issue. We'll get back to you.
+
+## Time estimate
 
 About **3 hours**.
 

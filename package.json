@@ -1,15 +1,10 @@
 {
-  "name": "account-management-frontend-level-1",
+  "name": "transaction-management-frontend-level-1",
   "version": "0.0.1",
   "scripts": {
     "build": "echo build your frontend app here",
     "start": "echo start your frontend app here",
-    "start:backend": "node_modules/.bin/account-management-api",
-    "start:fullstack": "npm run start:backend & npm run start:frontend",
     "test": "cypress run"
-  },
-  "dependencies": {
-    "@devskills/account-management-api": "^0.0.3"
   },
   "devDependencies": {
     "cypress": "^5.4.0"

@@ -24,7 +24,7 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
-          start: npm run start:fullstack
+          start: npm run start
       - name: Fetch test results
         if: always()
         run: "echo ::set-output name=results::$(jq -r '[.results[].suites[].tests[] | {test: .title, result: .state}]' cypress/results/mochawesome.json)"
