@@ -37,25 +37,4 @@ describe('Transaction Management Frontend - Level 1', () => {
     cy.get('[data-type=transaction-form]').submit()
     cy.get(`[data-type=transaction][data-account-id=${anotherAccountId}][data-amount=${negativeAmount}][data-balance=${negativeBalance}]`).should('exist')
   })
-
-  it('The app can handle invalid input scenarios', () => {
-    cy.visit('/')
-
-    // invalid account_id
-    const invalidAccountId = 123
-    const invalidAccountIdAmount = 12
-    cy.get('[data-type=account-id]').type(invalidAccountId)
-    cy.get('[data-type=amount]').type(invalidAccountIdAmount)
-    cy.get('[data-type=transaction-form]').submit()
-    cy.get(`[data-type=transaction][data-account-id=${invalidAccountId}][data-amount=${invalidAccountIdAmount}]`).should('not.exist')
-
-    const invalidAmountAccountId = uuid()
-    const invalidAmount = 'abc'
-    cy.get('[data-type=account-id]').type(invalidAmountAccountId)
-    // invalid amount
-    cy.get('[data-type=amount]').type(invalidAmount)
-    cy.get('[data-type=transaction-form]').submit()
-    cy.get(`[data-type=transaction][data-account-id=${invalidAmountAccountId}][data-amount=${invalidAmount}]`).should('not.exist')
-
-  })
 })
