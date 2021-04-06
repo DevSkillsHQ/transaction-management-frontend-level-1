@@ -101,7 +101,7 @@ npm run test
 ## What we expect from you
 
 1. Make the provided E2E tests pass.
-2. Push your code to the new `implementation` branch.
+2. Push your code to the new `implementation` branch. We encourage you to commit and push your changes regularly as it's a good way for you to showcase your thinking process.
 3. Create a new pull request, but please **do not merge it**.
 4. Await further instructions from the hiring team.
 
@@ -111,7 +111,7 @@ Start with [Troubleshooting](https://www.notion.so/Troubleshooting-d18bdb5d2ac34
 
 ## Time estimate
 
-About **3 hours**.
+**1-3 hours** depending on your experience level.
 
 ---
 
