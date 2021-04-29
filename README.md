@@ -1,12 +1,15 @@
 # Transaction Management Frontend - Level 1
 
-Your task is to **build a frontend app** that **integrates with the Transaction Management API** and **make the provided E2E tests pass**.
+Your task is to **build a frontend app** that:
+
+1. Integrates with the provided Transaction Management API to create and show transaction/account data.
+2. Makes the provided E2E tests pass.
 
 Please agree with your hiring team regarding the tech stack choice.
 
-Here's how your app could look:
+Here's the mockup with hints:
 
-![tm](https://user-images.githubusercontent.com/1162212/112980759-905c8a00-915a-11eb-9a49-b439e119a76d.png)
+![Transaction Management Frontend](https://user-images.githubusercontent.com/1162212/116607772-b11f2780-a932-11eb-8663-6c920533072c.png)
 
 Feel free to tweak the UI, but please ensure that the following HTML is in place.
 
@@ -23,7 +26,7 @@ Both input **fields should be cleared** after the form is submitted.
 
 #### The transaction list
 
-Every new transaction goes on **the top of the list** and should have an enclosing `<div />` with the following structure:
+Every newly submitted transaction should go on **the top of the list** and should have an enclosing `<div />` with the following structure:
 
 ```html
 <div 
@@ -37,7 +40,7 @@ Every new transaction goes on **the top of the list** and should have an enclosi
 
 - `${transaction-account-id}` - account id of the corresponding transaction.
 - `${transaction-amount}` - transaction amount.
-- `${current-account-balance}` - the current balance of the corresponding account right after submitting the transaction.
+- `${current-account-balance}` - the current account balance right after submitting the transaction (only needed to be initialized for the transactions submitted from the current client).
 
 ## Before you get started
 
@@ -115,6 +118,6 @@ Start with [Troubleshooting](https://www.notion.so/Troubleshooting-d18bdb5d2ac34
 
 ---
 
-Made by [DevSkills](https://devskills.co).
+Made by [DevSkills](https://devskills.co). 
 
 How was your experience? **Give us a shout on [Twitter](https://twitter.com/DevSkillsHQ) / [LinkedIn](https://www.linkedin.com/company/devskills)**.
