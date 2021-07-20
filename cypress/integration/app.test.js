@@ -17,7 +17,7 @@ describe('Transaction Management Frontend - Level 1', () => {
     const balance = 30
     cy.get('[data-type=account-id]').type(accountId)
     cy.get('[data-type=amount]').type(amount)
-    cy.get('[data-type=transaction-form]').submit()
+    cy.get('[data-type=transaction-submit]').click()
     cy.get(`[data-type=transaction][data-account-id=${accountId}][data-amount=${amount}][data-balance=${balance}]`).should('exist')
 
     // submit a new transaction to the same account and verify the balance
@@ -25,7 +25,7 @@ describe('Transaction Management Frontend - Level 1', () => {
     const newBalance = 37
     cy.get('[data-type=account-id]').type(accountId)
     cy.get('[data-type=amount]').type(newAmount)
-    cy.get('[data-type=transaction-form]').submit()
+    cy.get('[data-type=transaction-submit]').click()
     cy.get(`[data-type=transaction][data-account-id=${accountId}][data-amount=${newAmount}][data-balance=${newBalance}]`).should('exist')
 
     // submit another transaction & verify the position on the list
@@ -34,7 +34,7 @@ describe('Transaction Management Frontend - Level 1', () => {
     const anotherBalance = 7
     cy.get('[data-type=account-id]').type(anotherAccountId)
     cy.get('[data-type=amount]').type(anotherAmount)
-    cy.get('[data-type=transaction-form]').submit()
+    cy.get('[data-type=transaction-submit]').click()
     cy.get(`[data-type=transaction][data-account-id=${anotherAccountId}][data-amount=${anotherAmount}][data-balance=${anotherBalance}]`).should('exist')
 
     // submit a transaction with a negative amount & verify the position on the list
@@ -42,7 +42,7 @@ describe('Transaction Management Frontend - Level 1', () => {
     const negativeBalance = 2
     cy.get('[data-type=account-id]').type(anotherAccountId)
     cy.get('[data-type=amount]').type(negativeAmount)
-    cy.get('[data-type=transaction-form]').submit()
+    cy.get('[data-type=transaction-submit]').click()
     cy.get(`[data-type=transaction][data-account-id=${anotherAccountId}][data-amount=${negativeAmount}][data-balance=${negativeBalance}]`).should('exist')
   })
 })
