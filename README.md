@@ -120,6 +120,6 @@ Start with [Troubleshooting](https://www.notion.so/Troubleshooting-d18bdb5d2ac34
 
 ---
 
-Made by [DevSkills](https://devskills.co). 
+Authored by [Maksim Ivanov](https://devskills.co/authors/maksim-ivanov) via [DevSkills](https://devskills.co).
 
 How was your experience? **Give us a shout on [Twitter](https://twitter.com/DevSkillsHQ) / [LinkedIn](https://www.linkedin.com/company/devskills)**.
