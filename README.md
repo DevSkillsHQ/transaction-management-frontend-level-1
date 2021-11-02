@@ -41,7 +41,7 @@ Every newly submitted transaction should go on **the top of the list** and shoul
 
 - `${transaction-account-id}` - account id of the corresponding transaction.
 - `${transaction-amount}` - transaction amount.
-- `${current-account-balance}` - the current account balance right after submitting the transaction (only needed to be initialized for the transactions submitted from the current client).
+- `${current-account-balance}` - the current account balance right after submitting the transaction (only show for the last submitted transaction).
 
 ## Before you get started
 
