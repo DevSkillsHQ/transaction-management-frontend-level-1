@@ -9,7 +9,7 @@ Please agree with your hiring team regarding the tech stack choice.
 
 Here's the mockup with hints:
 
-![Transaction Management Frontend](https://user-images.githubusercontent.com/1162212/116609175-5dadd900-a934-11eb-865b-7ff3bbb42322.png)
+![Transaction Management Frontend](https://user-images.githubusercontent.com/450319/139797772-4e4b2744-447c-411f-9b04-7028ba5e89a1.png)
 
 Feel free to tweak the UI, but please ensure that the following HTML is in place.
 
