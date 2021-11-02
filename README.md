@@ -1,15 +1,21 @@
-# Transaction Management Frontend - Level 1
+# Accounting Frontend - Level 1
 
-Your task is to **build a frontend app** that:
+Your task is to **build an accounting application frontend** that:
 
-1. Integrates with the provided Transaction Management API to create and show transaction/account data.
+1. Integrates with the provided Accounting API to create and show transaction/account data.
 2. Makes the provided E2E tests pass.
 
 Please agree with your hiring team regarding the tech stack choice.
 
-Here's the mockup with hints:
+## What you should build
 
-![Transaction Management Frontend](https://user-images.githubusercontent.com/1162212/116609175-5dadd900-a934-11eb-865b-7ff3bbb42322.png)
+You are required to implement an application that allows to record financial transactions and view the transaction history. The app consists of a form for submitting transactions and a transaction list.
+
+Transaction list displays the withdrawn or deposited amount for each transaction along with the affected account id. It also shows the current balance for the last submitted transaction.
+
+Here's the UI mockup with hints:
+
+![Accounting App Frontend](https://user-images.githubusercontent.com/450319/139797772-4e4b2744-447c-411f-9b04-7028ba5e89a1.png)
 
 Feel free to tweak the UI, but please ensure that the following HTML is in place.
 
@@ -25,23 +31,23 @@ Feel free to tweak the UI, but please ensure that the following HTML is in place
 
 Both input **fields should be cleared** after the form is submitted.
 
-#### The transaction list
+#### Transactions list
 
 Every newly submitted transaction should go on **the top of the list** and should have an enclosing `<div />` with the following structure:
 
 ```html
 <div 
-     data-type="transaction"
-     data-account-id="${transaction-account-id}"
-     data-amount="${transaction-amount}"
-     data-balance="${current-account-balance}" ...>
+  data-type="transaction"
+  data-account-id="${transaction-account-id}"
+  data-amount="${transaction-amount}"
+  data-balance="${current-account-balance}" ...>
   ...
 </div>
 ```
 
 - `${transaction-account-id}` - account id of the corresponding transaction.
 - `${transaction-amount}` - transaction amount.
-- `${current-account-balance}` - the current account balance right after submitting the transaction (only needed to be initialized for the transactions submitted from the current client).
+- `${current-account-balance}` - the current account balance right after submitting the transaction (only show for the last submitted transaction).
 
 ## Before you get started
 
@@ -65,13 +71,13 @@ Use [this link](https://docs.devskills.co/collections/85-the-interview-process/a
 ##### Get historical transactions
 
 ```
-GET https://infra.devskills.app/api/transaction-management/transactions
+GET https://infra.devskills.app/api/accounting/transactions
 ```
 
 ##### Create a new transaction
 
 ```
-POST https://infra.devskills.app/api/transaction-management/transaction
+POST https://infra.devskills.app/api/accounting/transaction
 Content-Type: application/json
 
 {
@@ -83,13 +89,13 @@ Content-Type: application/json
 ##### Get a transaction by id
 
 ```
-GET https://infra.devskills.app/api/transaction-management/transactions/7c94635a-40a3-4c87-888a-42c3ce5b9750
+GET https://infra.devskills.app/api/accounting/transactions/7c94635a-40a3-4c87-888a-42c3ce5b9750
 ```
 
 ##### Get an account by id
 
 ```
-GET https://infra.devskills.app/api/transaction-management/accounts/0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2
+GET https://infra.devskills.app/api/accounting/accounts/0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2
 ```
 
 </details>
