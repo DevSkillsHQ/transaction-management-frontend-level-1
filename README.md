@@ -1,15 +1,15 @@
-# Transaction Management Frontend - Level 1
+# Accounting Frontend - Level 1
 
-Your task is to **build a frontend app** that:
+Your task is to **build an accounting application frontend** that:
 
-1. Integrates with the provided Transaction Management API to create and show transaction/account data.
+1. Integrates with the provided Accounting API to create and show transaction/account data.
 2. Makes the provided E2E tests pass.
 
 Please agree with your hiring team regarding the tech stack choice.
 
 Here's the mockup with hints:
 
-![Transaction Management Frontend](https://user-images.githubusercontent.com/450319/139797772-4e4b2744-447c-411f-9b04-7028ba5e89a1.png)
+![Accounting App Frontend](https://user-images.githubusercontent.com/450319/139797772-4e4b2744-447c-411f-9b04-7028ba5e89a1.png)
 
 Feel free to tweak the UI, but please ensure that the following HTML is in place.
 
@@ -65,13 +65,13 @@ Use [this link](https://docs.devskills.co/collections/85-the-interview-process/a
 ##### Get historical transactions
 
 ```
-GET https://infra.devskills.app/api/transaction-management/transactions
+GET https://infra.devskills.app/api/accounting/transactions
 ```
 
 ##### Create a new transaction
 
 ```
-POST https://infra.devskills.app/api/transaction-management/transaction
+POST https://infra.devskills.app/api/accounting/transaction
 Content-Type: application/json
 
 {
@@ -83,13 +83,13 @@ Content-Type: application/json
 ##### Get a transaction by id
 
 ```
-GET https://infra.devskills.app/api/transaction-management/transactions/7c94635a-40a3-4c87-888a-42c3ce5b9750
+GET https://infra.devskills.app/api/accounting/transactions/7c94635a-40a3-4c87-888a-42c3ce5b9750
 ```
 
 ##### Get an account by id
 
 ```
-GET https://infra.devskills.app/api/transaction-management/accounts/0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2
+GET https://infra.devskills.app/api/accounting/accounts/0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2
 ```
 
 </details>
