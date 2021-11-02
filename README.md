@@ -31,10 +31,10 @@ Every newly submitted transaction should go on **the top of the list** and shoul
 
 ```html
 <div 
-     data-type="transaction"
-     data-account-id="${transaction-account-id}"
-     data-amount="${transaction-amount}"
-     data-balance="${current-account-balance}" ...>
+  data-type="transaction"
+  data-account-id="${transaction-account-id}"
+  data-amount="${transaction-amount}"
+  data-balance="${current-account-balance}" ...>
   ...
 </div>
 ```
