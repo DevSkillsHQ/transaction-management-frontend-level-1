@@ -31,7 +31,7 @@ Feel free to tweak the UI, but please ensure that the following HTML is in place
 
 Both input **fields should be cleared** after the form is submitted.
 
-#### The transaction list
+#### Transactions list
 
 Every newly submitted transaction should go on **the top of the list** and should have an enclosing `<div />` with the following structure:
 
