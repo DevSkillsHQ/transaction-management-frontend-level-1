@@ -7,7 +7,13 @@ Your task is to **build an accounting application frontend** that:
 
 Please agree with your hiring team regarding the tech stack choice.
 
-Here's the mockup with hints:
+## What you should build
+
+You are required to implement an application that allows to record financial transactions and view the transaction history. The app consists of a form for submitting transactions and a transaction list.
+
+Transaction list displays the withdrawn or deposited amount for each transaction along with the affected account id. It also shows the current balance for the last submitted transaction.
+
+Here's the UI mockup with hints:
 
 ![Accounting App Frontend](https://user-images.githubusercontent.com/450319/139797772-4e4b2744-447c-411f-9b04-7028ba5e89a1.png)
 
