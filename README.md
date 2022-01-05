@@ -1,8 +1,8 @@
-# Accounting Frontend - Level 1
+# Transaction Management Frontend - Level 1
 
 Your task is to **build an accounting application frontend** that:
 
-1. Integrates with the provided Accounting API to create and show transaction/account data.
+1. Integrates with the provided Transaction Management API to create and show transaction/account data.
 2. Makes the provided E2E tests pass.
 
 Please agree with your hiring team regarding the tech stack choice.
@@ -15,7 +15,7 @@ Transaction list displays the withdrawn or deposited amount for each transaction
 
 Here's the UI mockup with hints:
 
-![Accounting App Frontend](https://user-images.githubusercontent.com/450319/139797772-4e4b2744-447c-411f-9b04-7028ba5e89a1.png)
+![Transaction Management App Frontend](https://user-images.githubusercontent.com/450319/148279216-c189af94-3d99-4e69-8897-70af78361886.png)
 
 Feel free to tweak the UI, but please ensure that the following HTML is in place.
 
