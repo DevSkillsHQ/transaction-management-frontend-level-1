@@ -55,7 +55,7 @@ Every newly submitted transaction should go on **the top of the list** and shoul
 
 Need help? Head over to [our community on GitHub](https://github.com/orgs/DevSkillsHQ/discussions/categories/help) to get assistance.
 
-#### Import boilerplate
+### Import boilerplate
 
 Use [this link](https://docs.devskills.co/collections/85-the-interview-process/articles/342-importing-challenge-boilerplate) to get boilerplate code for your tech stack to configure a minimal setup for running the E2E tests.
 
@@ -67,7 +67,7 @@ Use [this link](https://docs.devskills.co/collections/85-the-interview-process/a
 
 </details>
 
-#### Get familiar with the API
+### Get familiar with the API
 
 <details>
 <summary>Request examples</summary>
@@ -104,7 +104,7 @@ GET https://infra.devskills.app/api/accounting/accounts/0afd02d3-6c59-46e7-b7bc-
 
 </details>
 
-#### Try running the E2E tests locally
+### Try running the E2E tests locally
 
 ```bash
 npm install
