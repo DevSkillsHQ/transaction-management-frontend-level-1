@@ -51,6 +51,10 @@ Every newly submitted transaction should go on **the top of the list** and shoul
 
 ## Before you get started
 
+### If you run into a problem
+
+Need help? Head over to [our community on GitHub](https://github.com/orgs/DevSkillsHQ/discussions/categories/help) to get assistance.
+
 #### Import boilerplate
 
 Use [this link](https://docs.devskills.co/collections/85-the-interview-process/articles/342-importing-challenge-boilerplate) to get boilerplate code for your tech stack to configure a minimal setup for running the E2E tests.
@@ -116,16 +120,14 @@ npm run test
 4. Document the tech decisions you've made by creating a new review on your PR ([see how](https://www.loom.com/share/94ae305e7fbf45d592099ac9f40d4274)).
 5. Await further instructions from the hiring team.
 
-## Need help?
-
-Start with [Troubleshooting](https://www.notion.so/Troubleshooting-d18bdb5d2ac341bb82b21f0ba8fb9546), and in case it didn't help, create a new GitHub issue. We'll get back to you.
-
 ## Time estimate
 
-**1-3 hours** depending on your experience level.
+**1-3 hours** depending on your experience level + the time to set up the project/environment (go with one of the provided boilerplates to move faster).
+
+Also, there is no countdown. The estimate is for you to plan your time.
 
 ---
 
 Authored by [Maksim Ivanov](https://devskills.co/authors/maksim-ivanov) via [DevSkills](https://devskills.co).
 
-How was your experience? **Give us a shout on [Twitter](https://twitter.com/DevSkillsHQ) / [LinkedIn](https://www.linkedin.com/company/devskills)**.
+How was your experience? **[Don't hesitate to give us a shout](https://github.com/orgs/DevSkillsHQ/discussions/categories/feedback)**.
