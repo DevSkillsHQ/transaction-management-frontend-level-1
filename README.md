@@ -74,6 +74,11 @@ To import a boilerplate project:
 
 </details>
 
+### Get familiar with the API
+
+<details>
+<summary>Request examples</summary>
+
 ##### Get historical transactions
 
 ```
