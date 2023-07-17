@@ -69,7 +69,7 @@ To import a boilerplate project:
 <details>
 <summary>If you instead want to use a custom setup, complete the steps below to make the E2E tests run correctly.</summary>
 
-1. Update the `baseUrl` (where your app will run) in [cypress.json](cypress.json).
+1. Update the `baseUrl` (where your app will run) in [cypress.config.js](cypress.config.js).
 2. Update the [`build`](package.json#L5) and [`start`](package.json#L6) scripts in [package.json](package.json) to respectively build and start your app.
 
 </details>
