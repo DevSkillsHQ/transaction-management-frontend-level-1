@@ -1,21 +1,14 @@
 # Transaction Management Frontend - Level 1
 
-Your task is to **build an accounting application frontend** that:
-
-1. Integrates with the provided Transaction Management API to create and show transaction/account data.
-2. Makes the provided E2E tests pass.
+Your task is to build a frontend app that allows the recording of financial transactions and viewing the transaction history by connecting to a hosted Transaction Management API.
 
 Please agree with your hiring team regarding the tech stack choice.
 
-## What you should build
-
-You are required to implement an application that allows to record financial transactions and view the transaction history. The app consists of a form for submitting transactions and a transaction list.
-
-Transaction list displays the withdrawn or deposited amount for each transaction along with the affected account id. It also shows the current balance for the last submitted transaction.
+The transaction list must display the withdrawn or deposited amount for each transaction, along with the affected account ID. It must also render the current balance for the last submitted transaction.
 
 Here's the UI mockup with hints:
 
-![Transaction Management App Frontend](https://user-images.githubusercontent.com/450319/148279216-c189af94-3d99-4e69-8897-70af78361886.png)
+![Transaction Management App Frontend](https://user-images.githubusercontent.com/450319/139797772-4e4b2744-447c-411f-9b04-7028ba5e89a1.png)
 
 Feel free to tweak the UI, but please ensure that the following HTML is in place.
 
@@ -49,100 +42,76 @@ Every newly submitted transaction should go on **the top of the list** and shoul
 - `${transaction-amount}` - transaction amount.
 - `${current-account-balance}` - the current account balance right after submitting the transaction (only show for the last submitted transaction).
 
-## Before you get started
+## Additional requirements
 
-### If you run into a problem
+- Do your best to make the [provided E2E tests](cypress/e2e/test.cy.js) pass.
 
-Head over to [our community on GitHub](https://github.com/orgs/DevSkillsHQ/discussions/categories/help) to get assistance.
-
-### Import a boilerplate project
-
-We have created a set of boilerplate projects for different tech stacks to help you get started quicker.
-
-To import a boilerplate project:
-
-1. Check out [this list](https://help.alvalabs.io/en/articles/7972852-supported-coding-test-boilerplates) to pick a desired boilerplate and copy its name (e.g., `frontend-boilerplate-react-nextjs`).
-2. Go to the "Actions" tab of your GitHub repository and select the "Setup boilerplate" workflow in the left side panel.
-3. In the "Run workflow" dropdown, paste the previously copied boilerplate name along with the branch name where you want the boilerplate to be imported (e.g., `implementation`) and click the "Run workflow" button.
-4. After the workflow has finished, your selected boilerplate will be imported to the specified branch, and you can continue with your task there.
+## Getting started
 
 <details>
-<summary>If you instead want to use a custom setup, complete the steps below to make the E2E tests run correctly.</summary>
-
-1. Update the `baseUrl` (where your app will run) in [cypress.config.js](cypress.config.js).
-2. Update the [`build`](package.json#L5) and [`start`](package.json#L6) scripts in [package.json](package.json) to respectively build and start your app.
+  <summary>If you run into a problem</summary>
+  
+  Navigate to [our community on GitHub](https://github.com/orgs/DevSkillsHQ/discussions/categories/help) to get assistance.
 
 </details>
 
-### Working in a Gitpod environment
+<details>
+  <summary>Import a starter project</summary>
 
-If you prefer to avoid installing dependencies like Docker or npm on your local machine, Gitpod offers a handy solution. It provides free access to preconfigured, in-browser IDEs that are ready for immediate use.
+  We have created a set of starter projects with different tech stacks to help you get started quickly.
 
-To utilize this for your repository, here's what you need to do:
-
-1. Go to 'https://gitpod.io/#your-repo-url', replacing 'your-repo-url' with the actual URL of your repository. For instance, 'https://gitpod.io/#https://github.com/octocat/Hello-World'.
-2. Authenticate using your GitHub account.
-
-By following these steps, you'll quickly find yourself in an environment tailored for your coding test.
-
-### Get familiar with the API
+  To import a starter project:
+  
+  1. Go to the "Actions" tab of your GitHub repository and select the "Setup boilerplate" workflow in the left side panel.
+  2. In the "Run workflow" dropdown, select the desired boilerplate along with the branch name where you want the boilerplate to be imported (e.g., `implementation`) and click the "Run workflow" button (you can find all starter projects' definitions [here](https://help.alvalabs.io/en/articles/7972852-supported-coding-test-boilerplates)).
+  
+  After the workflow has finished, your selected boilerplate will be imported to the specified branch, and you can continue from there.
+  
+  
+  > ⚠️ **Custom setup**
+  > 
+  > If you instead want to set up a custom project, complete the steps below to make the E2E tests run correctly:
+  > 1. Update the `baseUrl` (where your frontend runs) in [cypress.config.js](cypress.config.js).
+  > 2. Update the `apiUrl` (where your backend runs) in [cypress.config.js](cypress.config.js).
+  > 3. Update the [`build`](package.json#L5) and [`start`](package.json#L6) scripts in [package.json](package.json) to respectively build and start your app.
+  
+</details>
 
 <details>
-<summary>Request examples</summary>
+  <summary>Prepare for coding</summary>
 
-##### Get historical transactions
+  To get this repository to your local machine, clone it with `git clone`.
 
-```
-GET https://infra.devskills.app/api/accounting/transactions
-```
-
-##### Create a new transaction
-
-```
-POST https://infra.devskills.app/api/accounting/transaction
-Content-Type: application/json
-
-{
-  "account_id": "0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2",
-  "amount": 7
-}
-```
-
-##### Get a transaction by id
-
-```
-GET https://infra.devskills.app/api/accounting/transactions/7c94635a-40a3-4c87-888a-42c3ce5b9750
-```
-
-##### Get an account by id
-
-```
-GET https://infra.devskills.app/api/accounting/accounts/0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2
-```
+  Alternatively, spin up a pre-configured in-browser IDE by clicking on the "Code" tab in this repository and then "Create codespace on {branch_name}".
+  
+  ![CleanShot 2023-10-13 at 00 00 32@2x](https://github.com/DevSkillsHQ/transaction-management-fullstack-level-1/assets/1162212/598ff1ae-238d-4691-8b7c-eb2228fdefac)
 
 </details>
 
-### Try running the E2E tests locally
+<details>
+  <summary>Running the E2E tests</summary>
 
-```bash
-npm install
-# Run your app here
-npm run test
-```
+  > ⚠️ Before executing the tests, ensure [Node](https://nodejs.org/en) is installed and your app is running.
 
-## What we expect from you
+  ```bash
+  npm install
+  npm run test
+  ```
 
-1. Make the provided E2E tests pass.
-2. Push your code to the new `implementation` branch. We encourage you to commit and push your changes regularly as it's a good way for you to showcase your thinking process.
-3. Create a new pull request, but please **do not merge it**.
-4. Document the tech decisions you've made by creating a new review on your PR ([see how](https://www.loom.com/share/94ae305e7fbf45d592099ac9f40d4274)).
-5. Await further instructions from the hiring team.
+</details>
+
+## Submitting your solution for review
+
+1. Create a new `implementation` branch on this repository and push your code there.
+2. Create a new pull request from `implementation` **without merging it**.
+5. Document the tech decisions you've made by creating a new review on your PR ([see how](https://www.loom.com/share/94ae305e7fbf45d592099ac9f40d4274)).
+6. Await further instructions from the hiring team.
 
 ## Time estimate
 
-Between **1-3 hours** depending on your experience level + the time to set up the project/environment (go with one of the provided boilerplates to move quicker).
+Between 1 - 3 hours + the time to set up the project/environment (we suggest importing one of the provided project starters to save time).
 
-Also, there is no countdown. The estimate is for you to plan your time.
+However, there is no countdown. The estimate is for you to plan your time.
 
 ---
 

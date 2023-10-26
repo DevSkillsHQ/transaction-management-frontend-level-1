@@ -4,14 +4,19 @@ on:
   workflow_dispatch:
     inputs:
       boilerplate:
-        type: string
+        type: choice
         description: Name of boilerplate
+        options:
+        - frontend-boilerplate-react-nextjs
+        - frontend-boilerplate-vue
+        - frontend-boilerplate-angular
+        - frontend-boilerplate-elm
         required: true
       branch-name:
         type: string
         description: Name of the branch to initialize boilerplate in
         required: true
-        default: development
+        default: implementation
 
 
 jobs:
