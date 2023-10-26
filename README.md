@@ -4,6 +4,8 @@ Your task is to build a frontend app that allows the recording of financial tran
 
 Please agree with your hiring team regarding the tech stack choice.
 
+### Frontend requirements
+
 The transaction list must display the withdrawn or deposited amount for each transaction, along with the affected account ID. It must also render the current balance for the last submitted transaction.
 
 Here's the UI mockup with hints:
@@ -41,6 +43,42 @@ Every newly submitted transaction should go on **the top of the list** and shoul
 - `${transaction-account-id}` - account id of the corresponding transaction.
 - `${transaction-amount}` - transaction amount.
 - `${current-account-balance}` - the current account balance right after submitting the transaction (only show for the last submitted transaction).
+
+### The API to integrate with
+
+<details>
+<summary>Untoggle to see request examples</summary>
+
+##### Get historical transactions
+
+```
+GET https://infra.devskills.app/api/accounting/transactions
+```
+
+##### Create a new transaction
+
+```
+POST https://infra.devskills.app/api/accounting/transaction
+Content-Type: application/json
+
+{
+  "account_id": "0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2",
+  "amount": 7
+}
+```
+
+##### Get a transaction by id
+
+```
+GET https://infra.devskills.app/api/accounting/transactions/7c94635a-40a3-4c87-888a-42c3ce5b9750
+```
+
+##### Get an account by id
+```
+GET https://infra.devskills.app/api/accounting/accounts/0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2
+```
+
+</details>
 
 ## Additional requirements
 
