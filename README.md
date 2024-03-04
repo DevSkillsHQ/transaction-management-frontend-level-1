@@ -1,3 +1,4 @@
+<!--TASK_INSTRUCTIONS_START-->
 # Transaction Management Frontend - Level 1
 
 Your task is to build a frontend app that allows the recording of financial transactions and viewing the transaction history by connecting to a hosted Transaction Management API.
@@ -83,6 +84,8 @@ GET https://infra.devskills.app/api/accounting/accounts/0afd02d3-6c59-46e7-b7bc-
 ## Additional requirements
 
 - Do your best to make the [provided E2E tests](cypress/e2e/test.cy.js) pass.
+
+<!--TASK_INSTRUCTIONS_END-->
 
 ## Getting started
 
