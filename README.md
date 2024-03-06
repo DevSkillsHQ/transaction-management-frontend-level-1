@@ -95,7 +95,7 @@ GET https://infra.devskills.app/api/accounting/accounts/0afd02d3-6c59-46e7-b7bc-
 
 </details>
 
-## Solution expectations
+### Solution expectations
 
 - Do your best to make the [provided E2E tests](cypress/e2e/test.cy.js) pass.
 
