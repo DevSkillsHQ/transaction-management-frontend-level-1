@@ -101,6 +101,15 @@ GET https://infra.devskills.app/api/accounting/accounts/0afd02d3-6c59-46e7-b7bc-
 
 <!--TASK_INSTRUCTIONS_END-->
 
+### Running the E2E tests
+
+> ⚠️ Before executing the tests, ensure [Node](https://nodejs.org/en) is installed and your app is running.
+
+```bash
+npm install
+npm run test
+```
+
 ## When you are done
 
 [Create a new Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) from the branch where you've committed your solution code to the default branch of this repository. **Please do not merge the created Pull Request**.
