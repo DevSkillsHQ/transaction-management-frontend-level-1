@@ -89,6 +89,7 @@ GET https://infra.devskills.app/api/accounting/transactions/7c94635a-40a3-4c87-8
 ```
 
 ##### Get an account by id
+
 ```
 GET https://infra.devskills.app/api/accounting/accounts/0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2
 ```
@@ -97,18 +98,9 @@ GET https://infra.devskills.app/api/accounting/accounts/0afd02d3-6c59-46e7-b7bc-
 
 ### Solution expectations
 
-- Do your best to make the [provided E2E tests](cypress/e2e/test.cy.js) pass.
+- Do your best to make the [provided E2E tests](cypress/e2e/test.cy.js) pass. Check out [this tutorial](https://help.alvalabs.io/en/articles/9028831-how-to-work-with-cypress) to learn how to execute these tests and analyze the results.
 
 <!--TASK_INSTRUCTIONS_END-->
-
-### Running the E2E tests
-
-> ⚠️ Before executing the tests, ensure [Node](https://nodejs.org/en) is installed and your app is running.
-
-```bash
-npm install
-npm run test
-```
 
 ## When you are done
 
