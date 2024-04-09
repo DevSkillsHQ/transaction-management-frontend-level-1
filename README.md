@@ -104,7 +104,8 @@ GET https://infra.devskills.app/api/accounting/accounts/0afd02d3-6c59-46e7-b7bc-
 
 ## When you are done
 
-[Create a new Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) from the branch where you've committed your solution code to the default branch of this repository. **Please do not merge the created Pull Request**.
+1. [Create a new Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) from the branch where you've committed your solution to the default branch of this repository. **Please do not merge the created Pull Request**.
+2. Go to your application in [Alva Labs](https://app.alvalabs.io) and submit your test.
 
 ---
 
