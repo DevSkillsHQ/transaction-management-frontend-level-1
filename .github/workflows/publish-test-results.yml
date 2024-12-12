@@ -1,7 +1,9 @@
 name: Publish test results to Alva
 on:
   push:
-    branches:
+    branches-ignore:
+      - master
+      - main
       - '*'
       - '*/*'
       - '!master'
