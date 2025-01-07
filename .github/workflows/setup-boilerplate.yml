@@ -4,13 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       boilerplate:
-        type: choice
+        type: string
         description: Name of boilerplate
-        options:
-        - frontend-boilerplate-react-nextjs
-        - frontend-boilerplate-vue
-        - frontend-boilerplate-angular
-        - frontend-boilerplate-elm
         required: true
       branch-name:
         type: string
