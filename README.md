@@ -65,13 +65,13 @@ Every newly submitted transaction should go on **the top of the list** and shoul
 ##### Get historical transactions
 
 ```
-GET https://coding-test-api.alvalabs.io/api/accounting/transactions
+GET https://coding-test-api.alvalabs.io/api/transaction-management/transactions
 ```
 
 ##### Create a new transaction
 
 ```
-POST https://coding-test-api.alvalabs.io/api/accounting/transaction
+POST https://coding-test-api.alvalabs.io/api/transaction-management/transactions
 Content-Type: application/json
 
 {
@@ -83,13 +83,13 @@ Content-Type: application/json
 ##### Get a transaction by id
 
 ```
-GET https://coding-test-api.alvalabs.io/api/accounting/transactions/7c94635a-40a3-4c87-888a-42c3ce5b9750
+GET https://coding-test-api.alvalabs.io/api/transaction-management/transactions/7c94635a-40a3-4c87-888a-42c3ce5b9750
 ```
 
 ##### Get an account by id
 
 ```
-GET https://coding-test-api.alvalabs.io/api/accounting/accounts/0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2
+GET https://coding-test-api.alvalabs.io/api/transaction-management/accounts/0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2
 ```
 
 </details>
